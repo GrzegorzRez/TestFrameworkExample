@@ -6,7 +6,6 @@ import org.openqa.selenium.Keys;
 import static utilities.ActionsUtility.sendKeys;
 import static utilities.GetUtility.getText;
 import static utilities.JavaScriptUtility.scrollToElementJS;
-import static utilities.Utility.delay;
 import static utilities.WaitUtility.explicitWait;
 
 public class TextBoxPage extends ElementsPage {
