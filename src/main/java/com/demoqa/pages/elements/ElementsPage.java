@@ -11,6 +11,7 @@ public class ElementsPage extends HomePage {
     private By linksMenuItem = By.xpath("//li[@id='item-5']//span[text()='Links']");
     private By dynamicMenuItem = By.xpath("//li[@id='item-8']//span[text()='Dynamic Properties']");
     private By textBoxMenuItem = By.xpath("//li[@id='item-0']//span[text()='Text Box']");
+    private By checkBoxMenuItem = By.xpath("//li[@id='item-1']//span[text()='Check Box']");
 
     public WebTablesPage clickWebTables() {
         click(webTablesMenuItem);
@@ -32,5 +33,12 @@ public class ElementsPage extends HomePage {
         scrollToElementJS(textBoxMenuItem);
         click(textBoxMenuItem);
         return new TextBoxPage();
+    }
+
+    public CheckBoxPage clickCheckBox() {
+        scrollToElementJS(checkBoxMenuItem);
+        click(checkBoxMenuItem);
+        return new CheckBoxPage();
+
     }
 }
