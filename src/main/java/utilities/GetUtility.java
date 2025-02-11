@@ -22,7 +22,11 @@ public class GetUtility extends Utility {
         return driver.findElement(locator).getDomAttribute(attribute);
    }
 
-   public static String getURL() {
+    public static String getURL() {
         return driver.getCurrentUrl();
    }
+
+    public static Boolean isSelected(By locator) {
+        return driver.findElement(locator).isSelected();
+    }
 }
