@@ -17,4 +17,12 @@ public class ActionsUtility extends Utility {
     public static void sendKeys(WebElement element, CharSequence text) {
         act().sendKeys(element, Keys.chord(text)).perform();
     }
+
+    public static void doubleClick(WebElement element) {
+        act().doubleClick(element).perform();
+    }
+
+    public static void rightClick(WebElement element) {
+        act().contextClick(element).perform();
+    }
 }
