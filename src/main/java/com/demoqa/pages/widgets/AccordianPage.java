@@ -2,6 +2,7 @@ package com.demoqa.pages.widgets;
 
 import com.base.BasePage;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 
 import static utilities.JavaScriptUtility.scrollToElementJS;
 import static utilities.GetUtility.getText;
@@ -17,14 +18,23 @@ public class AccordianPage extends BasePage {
     public Boolean closeFirstSection() {
         scrollToElementJS(firstHeading);
         click(firstHeading);
-        System.out.println(find(firstSectionClosed));
-        return find(firstSectionClosed).isEnabled();
+        try {
+            driver.findElement(firstSectionClosed);
+            return true; // Element znaleziony
+        } catch (NoSuchElementException e) {
+            return false; // Element nie istnieje
+        }
     }
 
     public Boolean openSecondSection() {
         scrollToElementJS(secondHeading);
         click(secondHeading);
-        return find(secondSectionOpened).isDisplayed();
+        try {
+            driver.findElement(secondSectionOpened);
+            return true; // Element znaleziony
+        } catch (NoSuchElementException e) {
+            return false; // Element nie istnieje
+        }
     }
 
 

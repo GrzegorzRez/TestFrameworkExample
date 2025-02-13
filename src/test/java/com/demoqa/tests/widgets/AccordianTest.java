@@ -4,7 +4,6 @@ import com.demoqa.base.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import static utilities.Utility.delay;
 
 public class AccordianTest extends BaseTest {
 
@@ -12,14 +11,11 @@ public class AccordianTest extends BaseTest {
     public void closeAndOpenAccordian() {
         var accordianPage = homePage.goToWidgets().clickAccordian();
         Boolean isSectionVisible = accordianPage.closeFirstSection();
-        Assert.assertFalse(isSectionVisible, "\n Actual text do not match the expected \n");
-
-        delay(5000);
-
+        Assert.assertFalse(isSectionVisible, "\n Section did not close correctly \n");
 
         isSectionVisible = accordianPage.openSecondSection();
         Assert.assertTrue(isSectionVisible,
-                "\n Actual text does not contain expected string \n");
+                "\n Section did not open correctly \n");
     }
 
 

@@ -30,8 +30,8 @@ public class BaseTest {
 
     @BeforeClass
     public void setUp() {
-        //driver = new FirefoxDriver();
-        driver = new EdgeDriver();
+        driver = new FirefoxDriver();
+        //driver = new EdgeDriver();
         driver.manage().window().maximize();
     }
 
