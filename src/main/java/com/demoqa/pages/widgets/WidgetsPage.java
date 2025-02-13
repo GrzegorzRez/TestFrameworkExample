@@ -11,6 +11,7 @@ public class WidgetsPage extends HomePage {
     private final By datePickerMenuItem = By.xpath("//li[@id='item-2']//span[text()='Date Picker']");
     private final By progressBarMenuItem = By.xpath("//li[@id='item-4']//span[text()='Progress Bar']");
     private final By sliderMenuItem = By.xpath("//li[@id='item-3']//span[text()='Slider']");
+    private final By accordianMenuItem = By.xpath("//li[@id='item-0']//span[text()='Accordian']");
 
     public SelectMenuPage clickSelectMenu() {
         scrollToElementJS(selectMenuMenuItem);
@@ -33,5 +34,11 @@ public class WidgetsPage extends HomePage {
         scrollToElementJS(sliderMenuItem);
         click(sliderMenuItem);
         return new SliderPage();
+    }
+
+    public AccordianPage clickAccordian() {
+        scrollToElementJS(accordianMenuItem);
+        click(accordianMenuItem);
+        return new AccordianPage();
     }
 }
