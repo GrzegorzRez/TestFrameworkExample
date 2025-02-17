@@ -3,9 +3,11 @@ package com.demoqa.pages.widgets;
 import com.base.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebElement;
 
+import static utilities.JavaScriptUtility.clickJS;
 import static utilities.JavaScriptUtility.scrollToElementJS;
-import static utilities.GetUtility.getText;
+import static utilities.WaitUtility.fluentWaitUntilVisible;
 
 public class AccordianPage extends BasePage {
 
@@ -29,6 +31,7 @@ public class AccordianPage extends BasePage {
     public Boolean openSecondSection() {
         scrollToElementJS(secondHeading);
         click(secondHeading);
+        fluentWaitUntilVisible(2,secondSectionOpened);
         try {
             driver.findElement(secondSectionOpened);
             return true; // Element znaleziony
