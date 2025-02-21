@@ -1,12 +1,12 @@
 package com.demoqa.tests.dynamic_wait;
 
-import com.demoqa.base.BaseTest;
+import com.base.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class DynamicWaitTest extends BaseTest {
 
-    
+    @Test
     public void testVisibleAfterButtonText() {
         var dynamicPage = homePage.goToElements().clickDynamicProperties();
         String actualText = dynamicPage.getVisibleAfterButtonText();

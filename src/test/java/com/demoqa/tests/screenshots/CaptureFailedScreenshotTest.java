@@ -1,6 +1,6 @@
 package com.demoqa.tests.screenshots;
 
-import com.demoqa.base.BaseTest;
+import com.base.BaseTest;
 import org.testng.annotations.Test;
 
 public class CaptureFailedScreenshotTest extends BaseTest {

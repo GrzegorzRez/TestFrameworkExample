@@ -2,7 +2,7 @@ package com.demoqa.tests.widgets;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import com.demoqa.base.BaseTest;
+import com.base.BaseTest;
 
 public class DateTest extends BaseTest {
 

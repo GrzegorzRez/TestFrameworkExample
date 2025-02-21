@@ -1,6 +1,6 @@
 package com.demoqa.tests.alerts_frames_windows;
 
-import com.demoqa.base.BaseTest;
+import com.base.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

@@ -1,4 +1,4 @@
-package com.demoqa.base;
+package com.base;
 
 import com.demoqa.pages.HomePage;
 import com.base.BasePage;
