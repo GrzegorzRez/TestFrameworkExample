@@ -2,6 +2,8 @@ package com.demoqa.pages.elements;
 
 import org.openqa.selenium.By;
 
+import static utilities.JavaScriptUtility.scrollToElementJS;
+
 public class WebTablesPage extends ElementsPage{
 
     private final By registrationAgeField = By.id("age");
@@ -10,6 +12,7 @@ public class WebTablesPage extends ElementsPage{
 
     public void clickEdit(String email) {
         By edit = By.xpath("//div[text()='"+ email +"']//following::span[@title='Edit']");
+        scrollToElementJS(edit);
         click(edit);
     }
 
